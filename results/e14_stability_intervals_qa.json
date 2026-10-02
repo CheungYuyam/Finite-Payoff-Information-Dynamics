@@ -1,0 +1,29 @@
+{
+  "core_conclusion": "Instability intervals depend on the kernel, sampling design and feedback size; one Fermi m=2 window is narrow.",
+  "archetype": "quantitative grid with a magnified interval panel",
+  "reuse_level": "style-only inheritance; interval chart rebuilt",
+  "backend": "Python/matplotlib",
+  "input_rows": 3808,
+  "represented_rows": 3808,
+  "excluded_rows": 0,
+  "feedback_branches": 28,
+  "refined_boundaries": 11,
+  "scan_beta_range": [
+    0.05,
+    1.4
+  ],
+  "no_feedback_interpolation": true,
+  "source_sha256": {
+    "value_full_e14_dense_scan.csv": "73aedd5e0eed9ab0d6447cbe723489e73bc0d1c38789f9d8b3045d7cecab34dc",
+    "value_full_e14_critical_boundaries.csv": "f65ce51401235940c03147e8b2fe684a8142e1c03c05d6f1383b6b2043031eb6"
+  },
+  "classification_check": "Every dense-scan sign agrees with its displayed interval",
+  "color_roles": {
+    "stable": "#D2D2D2",
+    "unstable": "#770020",
+    "boundary": "#16386A"
+  },
+  "figure_width_inches": 7.2,
+  "editable_svg_text": true,
+  "tiff_dpi": 600
+}

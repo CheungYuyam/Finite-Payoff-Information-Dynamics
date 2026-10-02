@@ -1,0 +1,21 @@
+{
+  "schema_version": "v3.2-cross",
+  "profile": "nature_cross_full",
+  "seed": 20260903,
+  "cases": 24,
+  "train_states": 80,
+  "test_states": 240,
+  "dirichlet_alpha": 1.5,
+  "payoff_perturbation_scale": 0.18,
+  "anchor": {"name": "anchor_fermi_ind_b04_m2", "beta": 0.4, "m": 2, "kernel": "fermi", "sampling_mode": "independent"},
+  "targets": [
+    {"name": "anchor_fermi_ind_b04_m2", "beta": 0.4, "m": 2, "kernel": "fermi", "sampling_mode": "independent"},
+    {"name": "fermi_ind_b015_m1", "beta": 0.15, "m": 1, "kernel": "fermi", "sampling_mode": "independent"},
+    {"name": "fermi_ind_b07_m5", "beta": 0.7, "m": 5, "kernel": "fermi", "sampling_mode": "independent"},
+    {"name": "fermi_common_b04_m2", "beta": 0.4, "m": 2, "kernel": "fermi", "sampling_mode": "common"},
+    {"name": "fermi_common_b07_m1", "beta": 0.7, "m": 1, "kernel": "fermi", "sampling_mode": "common"},
+    {"name": "arctan_ind_b015_m2", "beta": 0.15, "m": 2, "kernel": "arctan", "sampling_mode": "independent"},
+    {"name": "arctan_ind_b03_m2", "beta": 0.3, "m": 2, "kernel": "arctan", "sampling_mode": "independent"},
+    {"name": "arctan_common_b03_m5", "beta": 0.3, "m": 5, "kernel": "arctan", "sampling_mode": "common"}
+  ]
+}

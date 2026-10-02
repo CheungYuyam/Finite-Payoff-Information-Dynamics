@@ -1,0 +1,59 @@
+{
+  "schema_version": "v3.2",
+  "profile": "nature_full",
+  "seed": 20260903,
+  "qualitative_map": {
+    "cases": 2400,
+    "betas": [0.1, 0.2, 0.3, 0.5, 0.7, 0.9, 1.2],
+    "sample_sizes": [1, 2, 3, 5, 10],
+    "kernels": ["fermi", "arctan"],
+    "sampling_modes": ["independent", "common"],
+    "payoff_lognormal_sigma": 0.55,
+    "stability_tolerance": 0.0001
+  },
+  "non_equivalence": {
+    "cases": 24,
+    "train_states": 80,
+    "test_states": 240,
+    "dirichlet_alpha": 1.5
+  },
+  "paired_accuracy": {
+    "base_cases": 120,
+    "dimensions": [2, 3, 4],
+    "betas": [0.1, 0.2, 0.3, 0.5, 0.7, 0.9, 1.2],
+    "sample_sizes": [1, 2, 3, 5, 10],
+    "kernels": ["fermi", "arctan"],
+    "sampling_modes": ["independent", "common"],
+    "dirichlet_alpha": 1.5
+  },
+  "micro_macro": {
+    "populations": [200, 800, 2000],
+    "seeds": 30,
+    "horizon": 4.0,
+    "record_dt": 0.1,
+    "internal_dt": 0.005,
+    "games": [
+      {
+        "name": "stability_reversal",
+        "payoff": [[0.0, -0.37061410, 2.77335386], [0.24483140, 0.0, -2.70698466], [-2.08439346, 3.52730968, 0.0]],
+        "initial_state": [0.52, 0.40, 0.08]
+      },
+      {
+        "name": "asymmetric_cycle",
+        "payoff": [[0.0, -1.0, 2.0], [1.4, 0.0, -0.6], [-1.3, 1.1, 0.0]],
+        "initial_state": [0.28, 0.46, 0.26]
+      },
+      {
+        "name": "balanced_cycle",
+        "payoff": [[0.0, -1.0, 1.0], [1.0, 0.0, -1.0], [-1.0, 1.0, 0.0]],
+        "initial_state": [0.45, 0.33, 0.22]
+      }
+    ],
+    "conditions": [
+      {"name": "fermi_ind_m1", "beta": 0.5, "m": 1, "kernel": "fermi", "sampling_mode": "independent"},
+      {"name": "fermi_common_m3", "beta": 0.7, "m": 3, "kernel": "fermi", "sampling_mode": "common"},
+      {"name": "arctan_ind_m2", "beta": 0.3, "m": 2, "kernel": "arctan", "sampling_mode": "independent"},
+      {"name": "arctan_common_m5", "beta": 0.5, "m": 5, "kernel": "arctan", "sampling_mode": "common"}
+    ]
+  }
+}

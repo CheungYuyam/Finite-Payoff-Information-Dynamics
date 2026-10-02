@@ -1,0 +1,63 @@
+{
+  "game": [
+    [
+      0.0,
+      3.0
+    ],
+    [
+      2.0,
+      0.0
+    ]
+  ],
+  "beta": 1.0,
+  "kernel": "fermi",
+  "sampling": "independent",
+  "sample_sizes": [
+    32,
+    64,
+    128,
+    256,
+    512
+  ],
+  "fit_sizes": [
+    64,
+    128,
+    256,
+    512
+  ],
+  "nash_x1": 0.6,
+  "reference_jacobian": -1.2,
+  "predicted_shift_coefficient": -0.028,
+  "predicted_jacobian_coefficient": 0.936,
+  "displacement_fit": {
+    "slope": -1.9854381024393806,
+    "r_squared": 0.9999955972087374
+  },
+  "jacobian_fit": {
+    "slope": -0.9879046982119686,
+    "r_squared": 0.999987493942705
+  },
+  "root_method": "bisection",
+  "root_bracket": [
+    0.55,
+    0.65
+  ],
+  "root_bracket_width_tolerance": 5e-15,
+  "jacobian_method": "analytic differentiation of binomial probabilities",
+  "finite_difference_steps": [
+    1e-05,
+    3e-06,
+    1e-06
+  ],
+  "max_field_residual": 1.7199064640831951e-15,
+  "max_implementation_difference": 8.326672684688674e-17,
+  "max_finite_difference_discrepancy": 7.524458833785275e-10,
+  "runtime": {
+    "python": "3.13.0",
+    "numpy": "2.4.4"
+  },
+  "source_sha256": {
+    "check_exact_nash_orders.py": "52b40eab68ebbe0c0241660711fa7cbca7cb295cbead63138e4ab388031d1fe0",
+    "automatica_model.py": "164812a0556bdb114f54090ee8c110c120fb4cdeb2149bcb6add3fd9dc9843f4"
+  }
+}

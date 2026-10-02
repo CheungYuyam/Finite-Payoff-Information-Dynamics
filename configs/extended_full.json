@@ -1,0 +1,69 @@
+{
+  "schema_version": "v3.1",
+  "profile": "extended_full",
+  "seed": 20260903,
+  "constructive_case": {
+    "name": "finite_feedback_stability_reversal",
+    "payoff": [
+      [0.0, -0.37061410, 2.77335386],
+      [0.24483140, 0.0, -2.70698466],
+      [-2.08439346, 3.52730968, 0.0]
+    ],
+    "beta": 0.5,
+    "m": 1,
+    "initial_state": [0.52, 0.40, 0.08],
+    "horizon": 40.0,
+    "record_dt": 0.05,
+    "internal_dt": 0.0025
+  },
+  "phase_games": [
+    {
+      "name": "constructive_rps",
+      "payoff": [
+        [0.0, -0.37061410, 2.77335386],
+        [0.24483140, 0.0, -2.70698466],
+        [-2.08439346, 3.52730968, 0.0]
+      ],
+      "states": [[0.52, 0.40, 0.08], [0.40, 0.35, 0.25], [0.70, 0.20, 0.10]]
+    },
+    {
+      "name": "asymmetric_rps",
+      "payoff": [[0.0, -1.0, 2.0], [1.4, 0.0, -0.6], [-1.3, 1.1, 0.0]],
+      "states": [[0.20, 0.50, 0.30], [0.55, 0.15, 0.30], [0.33, 0.34, 0.33]]
+    },
+    {
+      "name": "coordination_2x2",
+      "payoff": [[4.0, 0.0], [0.0, 3.0]],
+      "states": [[0.15, 0.85], [0.31, 0.69], [0.57, 0.43], [0.85, 0.15]]
+    },
+    {
+      "name": "hawk_dove_2x2",
+      "payoff": [[-1.0, 2.0], [0.0, 1.0]],
+      "states": [[0.2, 0.8], [0.5, 0.5], [0.8, 0.2]]
+    }
+  ],
+  "phase_betas": [0.05, 0.1, 0.2, 0.3, 0.5, 0.7, 1.0, 1.4],
+  "phase_sample_sizes": [1, 2, 3, 5, 10, 20, null],
+  "kernels": ["fermi", "arctan"],
+  "sampling_modes": ["independent", "common"],
+  "random_stress": {
+    "cases": 3000,
+    "dimensions": [2, 3, 4],
+    "betas": [0.05, 0.1, 0.2, 0.3, 0.5, 0.7, 1.0],
+    "sample_sizes": [1, 2, 3, 5, 10],
+    "dirichlet_alpha": 1.5
+  },
+  "finite_population": {
+    "populations": [100, 200, 500, 1000, 2000, 4000],
+    "seeds": 100,
+    "horizon": 4.0,
+    "record_dt": 0.05,
+    "replacement_modes": [true, false]
+  },
+  "heterogeneous_samples": [[1, 5, 20], [20, 5, 1], [1, 1, 20], [20, 1, 1]],
+  "benchmark": {
+    "dimensions": [2, 3, 4, 5],
+    "sample_sizes": [1, 2, 3, 5, 8, 12, 20],
+    "repeats": 20
+  }
+}

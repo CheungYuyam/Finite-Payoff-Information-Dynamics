@@ -1,0 +1,3 @@
+example,layer,m,left_beta,right_beta,critical_beta,crossing_direction,critical_equilibrium,residual_l2,root_max_real_eigenvalue,jacobian_step_spread
+frozen_E14_three_strategy_game,finite_sample_exact_m2,2,0.76,0.77,0.7612251476825862,stable_to_unstable,"[0.583503093358106,0.3620309138655948,0.05446599277629913]",4.5351498595657516e-17,1.3589823710802307e-14,1.5451213225547988e-10
+frozen_E14_three_strategy_game,finite_sample_exact_m2,2,0.8,0.81,0.8003041139399212,unstable_to_stable,"[0.5830179399226468,0.3621630650502654,0.05481899502708784]",5.267158949245004e-17,1.3790878161668019e-12,1.907405171308607e-10

@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "scope": "fixed two-strategy explanation and frozen E14 three-layer counterfactual only",
+  "two_strategy": {
+    "A": [
+      [
+        0.0,
+        3.0
+      ],
+      [
+        2.0,
+        0.0
+      ]
+    ],
+    "beta": 1.0,
+    "classical_x1": 0.6,
+    "full_feedback_x1": 0.6
+  },
+  "three_layer": {
+    "A": [
+      [
+        0.0,
+        -0.3706141,
+        2.77335386
+      ],
+      [
+        0.2448314,
+        0.0,
+        -2.70698466
+      ],
+      [
+        -2.08439346,
+        3.52730968,
+        0.0
+      ]
+    ],
+    "classical_equilibrium": [
+      0.5952060514993919,
+      0.35424705554250596,
+      0.05054689295810216
+    ]
+  },
+  "rows": {
+    "two_strategy": 8,
+    "three_layer": 408,
+    "boundaries": 2,
+    "regimes": 10,
+    "feedback_budget": 24
+  },
+  "important_interpretation": [
+    "The full-feedback bounded-kernel layer is a necessary control: it holds beta fixed while removing only sampling noise.",
+    "A crossing in the finite-sample layer that is absent from the full-feedback layer is evidence for the finite-sample mechanism in this frozen example, not a universal statement over games.",
+    "The approximation table is a certificate based on an author-selected absolute tolerance; it is not an error-fitted universal deployment rule.",
+    "The feedback-budget table inverses the proved finite-sample field bound at two pre-existing reference states; it is state-dependent and instantaneous, not an optimal or global sampling policy."
+  ]
+}

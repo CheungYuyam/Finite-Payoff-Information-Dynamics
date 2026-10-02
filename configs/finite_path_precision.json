@@ -1,0 +1,16 @@
+{
+  "schema_version": "v3.4",
+  "profile": "finite_path_precision",
+  "payoff": [[0.0, -0.37061410, 2.77335386], [0.24483140, 0.0, -2.70698466], [-2.08439346, 3.52730968, 0.0]],
+  "betas": [0.5],
+  "sample_sizes": [1, null],
+  "populations": [10000],
+  "seeds_per_direction": 320,
+  "horizon": 30.0,
+  "record_dt": 1.0,
+  "perturbation_radius": 0.015,
+  "exit_radius": 0.08,
+  "fit_horizon": 25.0,
+  "bootstrap_draws": 4000,
+  "base_seed": 2026090301
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": "v3-realistic-sensitivity-1",
+  "profile": "realistic_sensitivity_bounded_refined",
+  "seed": 20260904,
+  "games_per_dimension_per_scale": 6,
+  "dimensions": [2, 3, 4],
+  "scales": [0.5, 1, 2],
+  "betas": [0.1, 0.3, 0.5, 0.7, 1],
+  "sample_sizes": [1, 2, 5, 10, 20, null],
+  "kernels": ["fermi", "arctan"],
+  "sampling_modes": ["independent", "common"],
+  "dirichlet_alpha": 1.5,
+  "psi_bins": [0, 0.25, 0.5, 0.75, 1, 1.5, 3, 1000000000],
+  "main_work_region": {"psi_max": 1},
+  "gated_rule": {
+    "name": "moment5_if_psi_le_1_else_moment3",
+    "psi_max_for_moment5": 1
+  },
+  "rho_gated_rule": {
+    "name": "bounded_moment5_if_psi_le_1_and_bounded_fifth_increment_le_20pct_of_bounded_moment3_else_bounded_moment3",
+    "psi_max_for_moment5": 1,
+    "rho5_max": 0.2
+  },
+  "exact_work_guard_seconds": 30,
+  "include_bounded_models": true
+}

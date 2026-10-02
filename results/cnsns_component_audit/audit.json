@@ -1,0 +1,228 @@
+{
+  "game": [
+    [
+      0.0,
+      3.0
+    ],
+    [
+      2.0,
+      0.0
+    ]
+  ],
+  "state": [
+    0.37,
+    0.63
+  ],
+  "equilibrium": [
+    0.6,
+    0.4
+  ],
+  "beta": 0.2,
+  "sample_sizes": [
+    8,
+    16,
+    32,
+    64,
+    128,
+    256
+  ],
+  "slope_fit_sizes": [
+    32,
+    64,
+    128,
+    256
+  ],
+  "python": "3.13.0 (tags/v3.13.0:60403a5, Oct  7 2024, 09:38:07) [MSC v.1941 64 bit (AMD64)]",
+  "numpy": "2.4.4",
+  "scipy": "1.17.1",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "script_sha256": "d4477c01922f8a7946c21781d5104e46612c896543e3aa726d813b227d2eb238",
+  "model_sha256": "164812a0556bdb114f54090ee8c110c120fb4cdeb2149bcb6add3fd9dc9843f4",
+  "enumeration": {
+    "pairs_checked": 18,
+    "max_absolute_error": 8.881784197001252e-16
+  },
+  "scaling": [
+    {
+      "kernel": "fermi",
+      "sampling": "independent",
+      "field_slope": -0.9973609410354269,
+      "remainder_slope": -1.9999999991939132,
+      "shift_slope": -2.0004000756021054,
+      "jacobian_slope": -0.9953177201553998,
+      "shift_coefficient_relative_error": 0.0001217300928801901,
+      "jacobian_coefficient_relative_error": 0.0013986906348115724
+    },
+    {
+      "kernel": "fermi",
+      "sampling": "common",
+      "field_slope": -0.9950842173539616,
+      "remainder_slope": -2.000000000122034,
+      "shift_slope": -2.000762249237058,
+      "jacobian_slope": -0.9912613436270277,
+      "shift_coefficient_relative_error": 0.00023386949032966342,
+      "jacobian_coefficient_relative_error": 0.0026022419701621224
+    },
+    {
+      "kernel": "arctan",
+      "sampling": "independent",
+      "field_slope": -0.9973609410349774,
+      "remainder_slope": -1.9999999997101392,
+      "shift_slope": -2.0016028421359735,
+      "jacobian_slope": -0.9953212778864462,
+      "shift_coefficient_relative_error": 0.000487109844731215,
+      "jacobian_coefficient_relative_error": 0.0014011973840375447
+    },
+    {
+      "kernel": "arctan",
+      "sampling": "common",
+      "field_slope": -0.9950842173542191,
+      "remainder_slope": -1.9999999999294271,
+      "shift_slope": -2.0030582843446267,
+      "jacobian_slope": -0.9912707944926217,
+      "shift_coefficient_relative_error": 0.0009361376432930335,
+      "jacobian_coefficient_relative_error": 0.0026032757976063303
+    }
+  ],
+  "margin": {
+    "source": "nature_full_e9_qualitative_map.csv",
+    "sha256": "1e3c4250439d634221620e9617c9505beff32d2ccfd482bd799ecd3df4588258",
+    "rows": 2400,
+    "groups": [
+      {
+        "ensemble": "constructive_neighborhood",
+        "margin_min": 0.0,
+        "margin_max": 0.001,
+        "n": 18,
+        "valid": 18,
+        "failed": 0,
+        "neutral": 0,
+        "label_mismatch": 9,
+        "opposite_sign": 9
+      },
+      {
+        "ensemble": "constructive_neighborhood",
+        "margin_min": 0.001,
+        "margin_max": 0.01,
+        "n": 190,
+        "valid": 190,
+        "failed": 0,
+        "neutral": 0,
+        "label_mismatch": 24,
+        "opposite_sign": 24
+      },
+      {
+        "ensemble": "constructive_neighborhood",
+        "margin_min": 0.01,
+        "margin_max": 0.1,
+        "n": 544,
+        "valid": 543,
+        "failed": 1,
+        "neutral": 0,
+        "label_mismatch": 10,
+        "opposite_sign": 10
+      },
+      {
+        "ensemble": "constructive_neighborhood",
+        "margin_min": 0.1,
+        "margin_max": "inf",
+        "n": 48,
+        "valid": 48,
+        "failed": 0,
+        "neutral": 0,
+        "label_mismatch": 0,
+        "opposite_sign": 0
+      },
+      {
+        "ensemble": "near_boundary",
+        "margin_min": 0.0,
+        "margin_max": 0.001,
+        "n": 7,
+        "valid": 7,
+        "failed": 0,
+        "neutral": 1,
+        "label_mismatch": 2,
+        "opposite_sign": 1
+      },
+      {
+        "ensemble": "near_boundary",
+        "margin_min": 0.001,
+        "margin_max": 0.01,
+        "n": 60,
+        "valid": 59,
+        "failed": 1,
+        "neutral": 1,
+        "label_mismatch": 3,
+        "opposite_sign": 2
+      },
+      {
+        "ensemble": "near_boundary",
+        "margin_min": 0.01,
+        "margin_max": 0.1,
+        "n": 733,
+        "valid": 719,
+        "failed": 14,
+        "neutral": 0,
+        "label_mismatch": 2,
+        "opposite_sign": 2
+      },
+      {
+        "ensemble": "near_boundary",
+        "margin_min": 0.1,
+        "margin_max": "inf",
+        "n": 0,
+        "valid": 0,
+        "failed": 0,
+        "neutral": 0,
+        "label_mismatch": 0,
+        "opposite_sign": 0
+      },
+      {
+        "ensemble": "unconditional_interior",
+        "margin_min": 0.0,
+        "margin_max": 0.001,
+        "n": 1,
+        "valid": 1,
+        "failed": 0,
+        "neutral": 0,
+        "label_mismatch": 1,
+        "opposite_sign": 1
+      },
+      {
+        "ensemble": "unconditional_interior",
+        "margin_min": 0.001,
+        "margin_max": 0.01,
+        "n": 5,
+        "valid": 5,
+        "failed": 0,
+        "neutral": 0,
+        "label_mismatch": 0,
+        "opposite_sign": 0
+      },
+      {
+        "ensemble": "unconditional_interior",
+        "margin_min": 0.01,
+        "margin_max": 0.1,
+        "n": 112,
+        "valid": 112,
+        "failed": 0,
+        "neutral": 0,
+        "label_mismatch": 0,
+        "opposite_sign": 0
+      },
+      {
+        "ensemble": "unconditional_interior",
+        "margin_min": 0.1,
+        "margin_max": "inf",
+        "n": 682,
+        "valid": 680,
+        "failed": 2,
+        "neutral": 0,
+        "label_mismatch": 0,
+        "opposite_sign": 0
+      }
+    ],
+    "analysis": "post-hoc descriptive reanalysis"
+  },
+  "status": "passed"
+}

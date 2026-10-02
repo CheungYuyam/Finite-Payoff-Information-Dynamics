@@ -1,0 +1,91 @@
+{
+  "schema_version": "v3-weak-feedback-certificate-2",
+  "status": "passed",
+  "scope": "Theorems 3--4 instantiated for the unbounded Classical truncation in one frozen weak-feedback Fermi independent-sampling case, using the corrected standard-simplex Jacobian row-sum bound in Lemma 3.",
+  "limitations": [
+    "This is a sufficient-condition certificate, not a claim that the bound is tight.",
+    "It does not certify the non-perturbative E14 stability crossings.",
+    "It does not apply to bounded_moment_tail_rhs because clipping is nonsmooth."
+  ],
+  "case": {
+    "payoff": [
+      [
+        0.0,
+        -0.3706141,
+        2.77335386
+      ],
+      [
+        0.2448314,
+        0.0,
+        -2.70698466
+      ],
+      [
+        -2.08439346,
+        3.52730968,
+        0.0
+      ]
+    ],
+    "beta": 0.0002,
+    "m": 2,
+    "kernel": "fermi",
+    "sampling_mode": "independent",
+    "comparison_baseline": "classical replicator (order 1)",
+    "radius_inf": 1e-05
+  },
+  "theorem3": {
+    "epsilon0_inf": 2.0192061592924645e-07,
+    "epsilon1_inf": 5.6537772460189005e-06,
+    "L_classical_inf": 249.37177359999998,
+    "inverse_J_inf": 7.287389282480228,
+    "eta": 0.018213893178565425,
+    "contraction_lhs": 1.471474132434597e-06,
+    "contraction_rhs": 9.817861068214346e-06,
+    "displacement_bound_inf": 1.498772616775505e-06,
+    "passed": true
+  },
+  "theorem4_spectral": {
+    "classical_eigenvalues": [
+      {
+        "real": -0.004447733548221776,
+        "imag": 0.603394035537487
+      },
+      {
+        "real": -0.004447733548221776,
+        "imag": -0.603394035537487
+      }
+    ],
+    "classical_stability_margin": 0.004447733548221776,
+    "eigenvector_condition_2": 4.294386779016129,
+    "L_classical_2": 352.66494429815293,
+    "delta_jacobian_2": 0.0007554988197967979,
+    "bauer_fike_rhs": 0.003244404143297658,
+    "passed": true
+  },
+  "numerical_consistency_only": {
+    "classical_state": [
+      0.5952060514993919,
+      0.35424705554250596,
+      0.05054689295810216
+    ],
+    "exact_state": [
+      0.5952060498920055,
+      0.3542470568228949,
+      0.050546893285099564
+    ],
+    "exact_valid": true,
+    "exact_residual_l2": 2.6474629158726674e-17,
+    "actual_reduced_distance_inf": 1.6073863351451223e-09,
+    "exact_eigenvalues": [
+      {
+        "real": -0.0044477327044300866,
+        "imag": 0.6033940261236325
+      },
+      {
+        "real": -0.0044477327044300866,
+        "imag": -0.6033940261236325
+      }
+    ],
+    "classical_jacobian_step_spread": 2.370004192897568e-10,
+    "exact_jacobian_step_spread": 2.5955104732133805e-10
+  }
+}
