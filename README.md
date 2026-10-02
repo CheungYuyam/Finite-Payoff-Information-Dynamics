@@ -1,4 +1,4 @@
-# Finite-payoff-information dynamics
+# Finite-Payoff-Information Dynamics
 
 Reproducibility code for **Finite-Information Stochastic Dynamics in Population Games: Conditional Fields, Moment Corrections, and Stability Shifts**.
 
