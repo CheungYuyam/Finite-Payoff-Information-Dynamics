@@ -1,5 +1,5 @@
 # Versions used for release verification with Python 3.13.
-numpy==2.4.4
+numpy==2.4.6
 scipy==1.17.1
-pandas==3.0.2
-matplotlib==3.10.8
+pandas==3.0.3
+matplotlib==3.10.9

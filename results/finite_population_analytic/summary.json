@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "runtime": {
+    "python": "3.13.0",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "platform": "Windows"
+  },
+  "settings": {
+    "payoff_config": "configs/value_full.json",
+    "beta": 0.5,
+    "m": 1,
+    "kernel": "fermi",
+    "sampling_design": "independent",
+    "populations": [
+      50,
+      100,
+      200,
+      500,
+      1000,
+      2000,
+      5000,
+      10000
+    ],
+    "root_tol": 1e-11,
+    "derivative_steps": [
+      1e-05,
+      3e-06,
+      1e-06
+    ]
+  },
+  "config_sha256": "cb41a03a7289548d1f7b5b984386bc0e582a8f4f0911900f709d2daab5787306",
+  "source_sha256": {
+    "code/check_finite_population_analytic.py": "c6371fabaef4a251a438d2978c50a0462f213e01fffa90eaf65448360caee61c",
+    "code/automatica_model.py": "cf7bc8db0604d2acf9aef75d213832913bc5403df64df90c3184742e20d2155e",
+    "configs/value_full.json": "b8f2c599cd46749d20f66c0b586e4e5acdd4227b7990d4797451f56eaa2c2bf7",
+    "code/reproduction_metadata.py": "e87379cf92a4e4b471f97af07b137befac35db65ce0ba380a6f042bc1d702325"
+  },
+  "continuum_equilibrium": [
+    0.5628175504594267,
+    0.379405307929436,
+    0.05777714161113723
+  ],
+  "continuum_root_residual": 7.668122861502164e-17,
+  "continuum_spectral_abscissa": 0.00527549659854569,
+  "classical_spectral_abscissa": -0.0044477335144118,
+  "rows": [
+    {
+      "N": 50,
+      "x1": 0.56,
+      "x2": 0.38,
+      "x3": 0.06,
+      "spectral_abscissa": 0.0069369845216684725,
+      "same_state_drift_error": 0.00012173047242817906,
+      "center_residual": 0.003596692208057089,
+      "derivative_check": 2.2557755663399348e-10,
+      "generator_implementation_gap": 6.461844948013606e-17
+    },
+    {
+      "N": 100,
+      "x1": 0.56,
+      "x2": 0.38,
+      "x3": 0.06,
+      "spectral_abscissa": 0.006730553178145728,
+      "same_state_drift_error": 5.9833922895847005e-05,
+      "center_residual": 0.003515396204117095,
+      "derivative_check": 2.1880786071903913e-10,
+      "generator_implementation_gap": 9.410874857174178e-17
+    },
+    {
+      "N": 200,
+      "x1": 0.565,
+      "x2": 0.38,
+      "x3": 0.055,
+      "spectral_abscissa": 0.006464182046793943,
+      "same_state_drift_error": 2.7657536638856124e-05,
+      "center_residual": 0.004424257761152424,
+      "derivative_check": 2.1828827634351455e-10,
+      "generator_implementation_gap": 2.992397996059992e-17
+    },
+    {
+      "N": 500,
+      "x1": 0.562,
+      "x2": 0.38,
+      "x3": 0.058,
+      "spectral_abscissa": 0.006506216078556344,
+      "same_state_drift_error": 2.697815516408057e-06,
+      "center_residual": 0.00037723572570762275,
+      "derivative_check": 2.1467450039835967e-10,
+      "generator_implementation_gap": 7.800834631033204e-17
+    },
+    {
+      "N": 1000,
+      "x1": 0.563,
+      "x2": 0.379,
+      "x3": 0.058,
+      "spectral_abscissa": 0.0044904528534244065,
+      "same_state_drift_error": 1.1846680382528835e-06,
+      "center_residual": 0.00039389317930373145,
+      "derivative_check": 2.2575030733662516e-10,
+      "generator_implementation_gap": 3.542630598596386e-17
+    },
+    {
+      "N": 2000,
+      "x1": 0.563,
+      "x2": 0.3795,
+      "x3": 0.0575,
+      "spectral_abscissa": 0.005463547118636135,
+      "same_state_drift_error": 9.451263950340048e-08,
+      "center_residual": 0.00043855931413391006,
+      "derivative_check": 2.204469939925957e-10,
+      "generator_implementation_gap": 1.140038584368508e-16
+    },
+    {
+      "N": 5000,
+      "x1": 0.5628,
+      "x2": 0.3794,
+      "x3": 0.0578,
+      "spectral_abscissa": 0.0052690254675127335,
+      "same_state_drift_error": 1.5846005864663597e-07,
+      "center_residual": 3.617668913339844e-05,
+      "derivative_check": 2.197213522237007e-10,
+      "generator_implementation_gap": 8.315830662963819e-17
+    },
+    {
+      "N": 10000,
+      "x1": 0.5628,
+      "x2": 0.3794,
+      "x3": 0.0578,
+      "spectral_abscissa": 0.005267353007519335,
+      "same_state_drift_error": 7.92070334487856e-08,
+      "center_residual": 3.607781124941059e-05,
+      "derivative_check": 2.1877721856355947e-10,
+      "generator_implementation_gap": 8.220962972871337e-17
+    }
+  ]
+}

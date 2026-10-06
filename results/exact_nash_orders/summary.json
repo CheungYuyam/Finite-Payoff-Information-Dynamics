@@ -54,10 +54,10 @@
   "max_finite_difference_discrepancy": 7.524458833785275e-10,
   "runtime": {
     "python": "3.13.0",
-    "numpy": "2.4.4"
+    "numpy": "2.4.6"
   },
   "source_sha256": {
-    "check_exact_nash_orders.py": "52b40eab68ebbe0c0241660711fa7cbca7cb295cbead63138e4ab388031d1fe0",
-    "automatica_model.py": "164812a0556bdb114f54090ee8c110c120fb4cdeb2149bcb6add3fd9dc9843f4"
+    "check_exact_nash_orders.py": "0ae426edd47cbc5720e501077eeb15ea6fd2af4a9c1d24421e95a85637f5b586",
+    "automatica_model.py": "cf7bc8db0604d2acf9aef75d213832913bc5403df64df90c3184742e20d2155e"
   }
 }

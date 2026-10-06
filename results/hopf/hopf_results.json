@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "runtime": {
+    "python": "3.13.0",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "platform": "Windows"
+  },
+  "settings": {
+    "payoff_config": "configs/value_full.json",
+    "m": 2,
+    "kernel": "fermi",
+    "sampling_design": "independent",
+    "root_brackets": [
+      [
+        0.75,
+        0.78
+      ],
+      [
+        0.79,
+        0.82
+      ]
+    ],
+    "root_xtol": 1e-12,
+    "stationary_start": [
+      0.58,
+      0.36
+    ],
+    "stationary_tol": 1e-11,
+    "stationary_residual_limit": 1e-12,
+    "branch_derivative_steps": [
+      0.0001,
+      1e-05,
+      1e-06
+    ],
+    "state_derivative_audit_steps": [
+      0.001,
+      0.0003,
+      0.0001
+    ]
+  },
+  "config_sha256": "cb41a03a7289548d1f7b5b984386bc0e582a8f4f0911900f709d2daab5787306",
+  "source_sha256": {
+    "code/verify_hopf.py": "15ce7e9245ea2b6e5ffa842515703dc8f24d438dee7e27a7db65983a4d61c81c",
+    "code/automatica_model.py": "cf7bc8db0604d2acf9aef75d213832913bc5403df64df90c3184742e20d2155e",
+    "configs/value_full.json": "b8f2c599cd46749d20f66c0b586e4e5acdd4227b7990d4797451f56eaa2c2bf7",
+    "code/reproduction_metadata.py": "e87379cf92a4e4b471f97af07b137befac35db65ce0ba380a6f042bc1d702325"
+  },
+  "points": [
+    {
+      "beta": 0.761225161842427,
+      "state": [
+        0.5835030931724114,
+        0.36203091392518516
+      ],
+      "equilibrium": [
+        0.5835030931724114,
+        0.36203091392518516,
+        0.05446599290240339
+      ],
+      "eigenvalues": [
+        [
+          0.0,
+          0.5107355024971039
+        ],
+        [
+          0.0,
+          -0.5107355024971039
+        ]
+      ],
+      "omega": 0.5107355024971039,
+      "l1": 0.030551705700705128,
+      "branch_slopes": [
+        0.0005773639627504323,
+        0.0005773639621953208,
+        0.0005773639899508964
+      ],
+      "qnorm": 0.9999999999999999,
+      "pq": [
+        1.0,
+        0.0
+      ],
+      "stationary_residual": 2.7479017971280536e-17,
+      "independent_field_gap": 2.1250362580715887e-17,
+      "independent_jacobian_step": 1e-05,
+      "independent_jacobian_gap": 2.6797741803363806e-10,
+      "derivative_audits": [
+        {
+          "step": 0.001,
+          "second_derivative_max_error": 3.8057093627585914e-06,
+          "third_derivative_max_error": 1.3594631903757204e-05,
+          "l1_from_differenced_derivatives": 0.030537503116755984,
+          "l1_difference": 1.4202583949143865e-05
+        },
+        {
+          "step": 0.0003,
+          "second_derivative_max_error": 3.4251459490874936e-07,
+          "third_derivative_max_error": 1.223514734860487e-06,
+          "l1_from_differenced_derivatives": 0.0305504274665442,
+          "l1_difference": 1.2782341609271497e-06
+        },
+        {
+          "step": 0.0001,
+          "second_derivative_max_error": 3.8056284346055236e-08,
+          "third_derivative_max_error": 1.359373005271891e-07,
+          "l1_from_differenced_derivatives": 0.030551563679226863,
+          "l1_difference": 1.420214782651974e-07
+        }
+      ],
+      "classification": "subcritical"
+    },
+    {
+      "beta": 0.800304099462699,
+      "state": [
+        0.583017940092207,
+        0.36216306501328865
+      ],
+      "equilibrium": [
+        0.583017940092207,
+        0.36216306501328865,
+        0.05481899489450437
+      ],
+      "eigenvalues": [
+        [
+          4.2674197509029455e-16,
+          0.50405026666656
+        ],
+        [
+          4.2674197509029455e-16,
+          -0.50405026666656
+        ]
+      ],
+      "omega": 0.50405026666656,
+      "l1": 0.03706094626758748,
+      "branch_slopes": [
+        -0.0005727292951007712,
+        -0.0005727293361790231,
+        -0.0005727292529122963
+      ],
+      "qnorm": 0.9999999999999999,
+      "pq": [
+        1.0,
+        1.3181150780380403e-16
+      ],
+      "stationary_residual": 1.0582366971472347e-16,
+      "independent_field_gap": 2.4814677222761983e-17,
+      "independent_jacobian_step": 1e-05,
+      "independent_jacobian_gap": 2.7999003116008225e-10,
+      "derivative_audits": [
+        {
+          "step": 0.001,
+          "second_derivative_max_error": 4.116405390774958e-06,
+          "third_derivative_max_error": 1.52905407446724e-05,
+          "l1_from_differenced_derivatives": 0.03704546794269881,
+          "l1_difference": 1.5478324888663908e-05
+        },
+        {
+          "step": 0.0003,
+          "second_derivative_max_error": 3.7047756373809193e-07,
+          "third_derivative_max_error": 1.3761431105763222e-06,
+          "l1_from_differenced_derivatives": 0.03705955321138479,
+          "l1_difference": 1.3930562026906457e-06
+        },
+        {
+          "step": 0.0001,
+          "second_derivative_max_error": 4.116469032311443e-08,
+          "third_derivative_max_error": 1.5290382293642324e-07,
+          "l1_from_differenced_derivatives": 0.037060791491138244,
+          "l1_difference": 1.5477644923350686e-07
+        }
+      ],
+      "classification": "subcritical"
+    }
+  ],
+  "normalization": "q^*q=1; p^*q=1; raw derivative tensors B,C; normalized time"
+}

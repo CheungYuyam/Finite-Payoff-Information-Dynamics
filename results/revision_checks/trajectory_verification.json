@@ -1,0 +1,13 @@
+{
+  "classical": {
+    "tolerance_comparison": 3.5961622568692064e-11,
+    "archived_RK4_difference": 5.360711874402568e-13
+  },
+  "full_feedback": {
+    "tolerance_comparison": 3.554662120208718e-11
+  },
+  "finite_feedback": {
+    "tolerance_comparison": 8.367317949620201e-11,
+    "archived_RK4_difference": 1.1243783681891273e-12
+  }
+}

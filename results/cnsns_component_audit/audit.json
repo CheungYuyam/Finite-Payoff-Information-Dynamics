@@ -33,11 +33,11 @@
     256
   ],
   "python": "3.13.0 (tags/v3.13.0:60403a5, Oct  7 2024, 09:38:07) [MSC v.1941 64 bit (AMD64)]",
-  "numpy": "2.4.4",
+  "numpy": "2.4.6",
   "scipy": "1.17.1",
   "platform": "Windows-11-10.0.26200-SP0",
-  "script_sha256": "d4477c01922f8a7946c21781d5104e46612c896543e3aa726d813b227d2eb238",
-  "model_sha256": "164812a0556bdb114f54090ee8c110c120fb4cdeb2149bcb6add3fd9dc9843f4",
+  "script_sha256": "1a354ca563ddef9c85c2ba496f8cb28da20bf753a16b3b4cd14873ae8cc3f048",
+  "model_sha256": "cf7bc8db0604d2acf9aef75d213832913bc5403df64df90c3184742e20d2155e",
   "enumeration": {
     "pairs_checked": 18,
     "max_absolute_error": 8.881784197001252e-16

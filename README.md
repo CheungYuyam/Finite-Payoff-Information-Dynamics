@@ -2,65 +2,63 @@
 
 Reproducibility code for **Finite-Information Stochastic Dynamics in Population Games: Conditional Fields, Moment Corrections, and Stability Shifts**.
 
-The main result concerns the exact conditional field at fixed response sensitivity: near a fully mixed Nash equilibrium with a nonsingular reduced Jacobian, the stationary-point displacement is `O(m^-2)` and the Jacobian correction is `O(m^-1)`. These are leading orders only when the corresponding coefficients are nonzero.
+Near a nondegenerate fully mixed Nash equilibrium at fixed response sensitivity, the stationary-point displacement is `O(m^-2)` and the reduced-Jacobian correction is `O(m^-1)`, with these leading orders when the corresponding coefficients are nonzero.
 
-Independent and common sampling and normalized Fermi and arctangent responses are implemented. The direct exact-field order experiment uses independent sampling and the Fermi response; the four-combination order experiment uses the cubic surrogate. Small-feedback stability comparisons are distinct from large-feedback asymptotic tests.
+The current workflows reproduce:
 
-## Layout
+- Exact finite-sum orders for all four Fermi/arctangent and independent/common sampling combinations, with fits over `m = 256, 512, 1024, 2048` (Table C1).
+- Two nondegenerate subcritical Hopf points for independent Fermi sampling with `m = 2`, using analytic derivatives and the first Lyapunov coefficient (Table C4).
+- Analytically differentiated finite-population drift at rounded continuum stationary compositions (Table C3). These centers need not be finite-N equilibria.
+- The smaller-m independent-Fermi audit, cubic moment comparisons, matched approximation errors, stability-margin comparisons, and the four manuscript figures.
 
-- `code/`: model, experiment runners, analysis and plotting scripts.
-- `configs/`: frozen full and smoke-test settings, including additional experiments.
-- `tests/`: model identities, derivative bounds and saved-result checks.
-- `results/`: selected reference data supporting the manuscript and its appendices.
-- `docs/REPRODUCIBILITY.md`: calculation-to-result map and extended workflows.
+## Install
 
-The original module name `automatica_model.py` and experiment identifiers are retained for compatibility. They do not indicate a different model or a publication venue. Manuscript sources, editorial notes, credentials, caches and compiled executables are not included.
+Use Python 3.13 and the tested versions in `requirements.txt`:
 
-## Installation
-
-Use Python 3.13 for the dependency versions recorded in `requirements.txt`.
-
-```bash
+```sh
 python -m venv .venv
-# Linux/macOS:
-source .venv/bin/activate
-# Windows PowerShell instead:
-# .\.venv\Scripts\Activate.ps1
+# Linux/macOS: source .venv/bin/activate
+# PowerShell: .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
 ```
 
-Run commands from the repository root. No author-specific absolute paths are required.
+## Reproduce the current calculations
 
-## Quick verification
+From the repository root:
 
-```bash
+```sh
+python code/reproduce_current_manuscript.py
 python -m unittest discover -s tests -p "test_*.py" -v
-python code/check_exact_nash_orders.py
-python code/check_matched_approximation_summary.py
 ```
 
-The exact-order script enumerates binomial observations rather than using a moment truncation. It writes five stationary points and analytic Jacobians for `m = 32, 64, 128, 256, 512`, checks derivatives numerically, and fits the last four feedback sizes. Expected slopes are approximately `-1.9854` and `-0.9879`, with scaled coefficients approaching `-0.028` and `0.936`.
+The first command performs full finite sums at the manuscript batch sizes, both Hopf classifications, and all eight population-size calculations. It also reruns the original independent-Fermi order audit and checks the matched-error summary from saved data. Outputs go to `results/`; preserve a clean copy for before/after comparisons.
 
-The approximation-summary script recomputes Appendix E's table from the same 3,000 matched cases for both columns. Expected improvement frequencies are `91.30%` and `87.13%`; the 99th-percentile relative errors are `0.81`, `1.83` and `7.60`. These weak-response approximation comparisons are not tests of the exact-field asymptotic orders.
+To also regenerate the four manuscript figures:
 
-## Figures from included reference data
-
-```bash
-python code/plot_model_mechanism_v3.py
-python code/plot_two_strategy_convergence.py
-python code/plot_v3.py --profile extended_full
-python code/plot_value_checks_v3.py --profile value_full
-python code/plot_stability_intervals_v3.py
+```sh
+python code/reproduce_current_manuscript.py --figures
 ```
 
-Outputs are written to `figures/`. The last command produces the current interval representation for the appendix stability figure; run it **after** `plot_value_checks_v3.py` to replace that script's older representation. Individual plotting scripts may also produce additional diagnostic figures.
+Figures 1, 2 and 4 use direct field evaluations or included reference data. Figure 3 reintegrates the deterministic fields with a tighter-tolerance check. Plotting programs may also export diagnostic plots. The original ensembles and broad continuation scans have separate full runners described in [the reproduction guide](docs/REPRODUCIBILITY.md).
 
-## Recomputing experiments
+| Calculation | Entry point | Output directory |
+| --- | --- | --- |
+| Four-combination exact orders | `code/check_exact_four_variants.py` | `results/exact_four_variants/` |
+| Hopf classification | `code/verify_hopf.py` | `results/hopf/` |
+| Analytic finite-N drift | `code/check_finite_population_analytic.py` | `results/finite_population_analytic/` |
+| Smaller-m independent-Fermi exact orders | `code/check_exact_nash_orders.py` | `results/exact_nash_orders/` |
+| Cubic-order and margin checks | `code/audit_cnsns_components.py` | `results/cnsns_component_audit/` |
 
-Full runs can take substantially longer than the quick checks. See [the reproducibility guide](docs/REPRODUCIBILITY.md) for commands and the distinction between main-result and additional experiments. Runners write into `results/` and may overwrite included reference files; preserve a clean checkout for comparisons.
+Table 2 uses the cubic moment field at weak response. Table C1 instead uses exact finite sums at fixed beta = 1. These are distinct experiments. Appendix E's error comparisons are also moment-approximation studies, not exact-field asymptotic tests.
 
-All supplied data are simulated matrix-game results, not empirical financial-market measurements. Numerical sign changes are reported as local-stability reversals, not as identified normal-form bifurcations.
+## Contents and scope
+
+`code/`, `configs/`, `results/` and `tests/` contain implementations, settings, reference data and checks. `configs/current_manuscript_checks.json` specifies the new core calculations. See `docs/REPRODUCIBILITY.md` for the table/figure map, `docs/VALIDATION.md` for validation and precision notes, and `docs/CHANGES.md` for changed files.
+
+Existing additional-experiment runners remain available but are not required for the submitted manuscript. No supplementary experiments PDF is part of this package. The name `automatica_model.py` is retained for import compatibility. All data are simulated matrix-game results, not empirical market measurements.
+
+The Hopf classification applies to the two specified boundaries; other archived crossings have not all been assigned normal-form classifications. The older count-space finite-difference finite-N output remains a historical diagnostic and is not the source of Table C3.
 
 ## Citation and reuse
 
-Publication metadata and a DOI have not been added because they are not yet supplied. No reuse license has been selected by the authors in this release; a public repository alone is not an open-source license.
+Publication metadata and a DOI have not been supplied. No reuse license has been selected by the authors; this update does not assign one. The Hopf convention follows Y. A. Kuznetsov, *Andronov–Hopf bifurcation*, Scholarpedia 1(10) (2006), 1858, doi:10.4249/scholarpedia.1858.

@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "runtime": {
+    "python": "3.13.0",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "platform": "Windows"
+  },
+  "settings": {
+    "payoff": [
+      [
+        0.0,
+        3.0
+      ],
+      [
+        2.0,
+        0.0
+      ]
+    ],
+    "beta": 1.0,
+    "sample_sizes": [
+      256,
+      512,
+      1024,
+      2048
+    ],
+    "kernels": [
+      "fermi",
+      "arctan"
+    ],
+    "sampling_designs": [
+      "independent",
+      "common"
+    ],
+    "root_bracket": [
+      0.55,
+      0.65
+    ],
+    "root_xtol": 5e-15,
+    "derivative_steps": [
+      1e-05,
+      3e-06,
+      1e-06
+    ]
+  },
+  "config_sha256": "cb41a03a7289548d1f7b5b984386bc0e582a8f4f0911900f709d2daab5787306",
+  "source_sha256": {
+    "code/check_exact_four_variants.py": "49cf17a643f5d5f7396807544eda3a58c698e1654a92188a86a843b1f707a352",
+    "code/automatica_model.py": "cf7bc8db0604d2acf9aef75d213832913bc5403df64df90c3184742e20d2155e",
+    "code/reproduction_metadata.py": "e87379cf92a4e4b471f97af07b137befac35db65ce0ba380a6f042bc1d702325"
+  },
+  "nash": 0.6,
+  "reference_jacobian": -1.2,
+  "variants": [
+    {
+      "kernel": "fermi",
+      "sampling": "independent",
+      "displacement_slope": -1.9962480745489974,
+      "jacobian_slope": -0.9969129045121564,
+      "predicted_displacement": -0.027999999999999976,
+      "predicted_jacobian": 0.936,
+      "scaled_displacement": -0.02796806488186121,
+      "scaled_jacobian": 0.9351240980968214
+    },
+    {
+      "kernel": "fermi",
+      "sampling": "common",
+      "displacement_slope": -1.9928478309371283,
+      "jacobian_slope": -0.9941383349293047,
+      "predicted_displacement": -0.1,
+      "predicted_jacobian": 1.7999999999999998,
+      "scaled_displacement": -0.09978100471198559,
+      "scaled_jacobian": 1.7967852229262462
+    },
+    {
+      "kernel": "arctan",
+      "sampling": "independent",
+      "displacement_slope": -1.976269378498475,
+      "jacobian_slope": -0.9849481621813005,
+      "predicted_displacement": -0.1119999999999999,
+      "predicted_jacobian": 3.744,
+      "scaled_displacement": -0.11115655861794949,
+      "scaled_jacobian": 3.72636994188224
+    },
+    {
+      "kernel": "arctan",
+      "sampling": "common",
+      "displacement_slope": -1.9566505228684807,
+      "jacobian_slope": -0.9721626488188676,
+      "predicted_displacement": -0.4,
+      "predicted_jacobian": 7.199999999999999,
+      "scaled_displacement": -0.39426642330363393,
+      "scaled_jacobian": 7.135339697789277
+    }
+  ],
+  "max_root_residual": 1.050077579389865e-16,
+  "max_derivative_discrepancy": 1.4933279057771642e-09
+}
